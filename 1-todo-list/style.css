@@ -143,6 +143,9 @@ body {
 #greenBtn {
   background: #87ca8a;
 }
+.completed {
+  text-decoration: line-through;
+}
 
 @media screen and (min-width: 992px) {
   .navbar-brand > img {

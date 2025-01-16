@@ -14,7 +14,11 @@ function todoList(todos) {
     }
   }
 divEl.addEventListener('click',(e)=>{
-e.target.style
+  if (e.target.style.textDecoration === "line-through") {
+    element.style.textDecoration = ""; // حذف استایل
+  } else {
+    e.target.style.textDecoration = "line-through"; // اضافه کردن استایل
+  }
 })
 }
 
