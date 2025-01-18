@@ -16,6 +16,7 @@ function todoList(todos) {
 divEl.addEventListener('click',(e)=>{
   if (e.target.style.textDecoration === "line-through") {
     element.style.textDecoration = ""; // حذف استایل
+    element.style.remove();
   } else {
     e.target.style.textDecoration = "line-through"; // اضافه کردن استایل
   }
