@@ -10,6 +10,28 @@ for (const element of colours) {
  optionEl.value=element;
  optionEl.text=element;
 }
+const words = paragraph.split(" ");
+words.forEach(word => {
+  const spanElement = document.createElement("span");
+  spanElement.innerText = word + " "; // Add space after each word
+
+  spanElement.addEventListener("click", () => {
+    const selectedColour = selectEl.value;
+
+    if (selectedColour === "none") {
+        // Check if already highlighted and remove if so
+        if (spanElement.style.backgroundColor) {
+            spanElement.style.backgroundColor = "";
+        }
+    } else {
+      spanElement.style.backgroundColor = selectedColour;
+    }
+  });
+
+  pEL.appendChild(spanElement);
+  divEl.append(pEL);
+});
+
 }
 
 const paragraph =
